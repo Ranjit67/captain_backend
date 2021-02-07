@@ -6,10 +6,10 @@
   "start": "node app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start":"node app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ranjit sahoo",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",

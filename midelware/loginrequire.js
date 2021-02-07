@@ -1,5 +1,4 @@
 const jwt= require("jsonwebtoken");
-const {JWT_SECURE} = require("../data");
 const user =require("../module/user");
 
 module.exports=(req,res,next)=>{
@@ -8,7 +7,7 @@ module.exports=(req,res,next)=>{
     res.status(401).json({error:"You need to login feast."})
   }else{
     const token = authorization.replace("Bearer ","");
-    jwt.verify(token,JWT_SECURE,(err,paylod)=>{
+    jwt.verify(token,process.env.JWT_SECURE,(err,paylod)=>{
       if(err){
           res.status(401).json({error:"You need to login feast."});
       } else{
